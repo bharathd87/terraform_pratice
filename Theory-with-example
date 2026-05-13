@@ -1,0 +1,36 @@
+1.ADVANTAGES and DISADVANTAGES
+2.IMPLICITY VS EXPLICITY
+3.DECLARATIVE VS IMPERATIVE APPROACHES
+4.TERRAFORM VS AWS CLOUDFORMATION
+5.TERRAFORM VS ANSIBLE
+6.TERRAFORM WORK FLOW
+7.Providers and Resources in Terraform
+8.Terraform Modules     [Root Module-Child Modules]
+9.Terraform Variables
+10.Expressions in Terraform 
+11.Functions in Terraform
+12.Provisioners in Terraform
+13.Secrets
+14.Workspaces
+15.State File
+16.State Locking and backend 
+17.Drift & Drift Detection
+18.Data Sources in Terraform
+19.Terraform Resource Lifecycle Rules
+20.Manual vs Automated Changes
+21.connections
+22.Advanced Terraform Concepts (Meta-arguments & Related Features) 
+[
+count,
+for_each,
+depends_on,
+Dynamic Blocks,
+Tainting Resources,
+Import Existing Infrastructure,
+Refresh & Drift Detection,
+etag
+concat
+]
+
+
+
