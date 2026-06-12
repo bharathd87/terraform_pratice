@@ -302,8 +302,38 @@ instance_type = "t2.micro"
 4. Environment Variables
 export TF_VAR_instance_type=t2.micro
 
-Terraform Variable Types
 
+Priority (highest → lowest)
+default value  → code
+terraform.tfvars → repo
+TF_VAR_ → pipeline
+-var-file → environment
+-var → manual override
+
+
+
+Difference: export vs -var
+1. export TF_VAR_* (Environment Variable)
+Set once → usable across multiple Terraform commands.
+No need to pass every time
+---
+export TF_VAR_env=prod
+terraform plan
+terraform apply
+
+2.terraform -var
+Pass variable directly in command.
+Explicit, Easy for one-time overrides, Only for that command
+---
+terraform apply -var="env=prod"
+
+Short memory trick
+export → Set once → many terraform commands
+-var → Set now → one terraform command
+
+
+
+Terraform Variable Types
 In Terraform (from HashiCorp), variables can have different data types. These types define what kind of value a variable can store.
 
 | Type   | Structure          | Example              | Use Case                 |
