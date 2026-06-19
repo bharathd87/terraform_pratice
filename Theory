@@ -280,16 +280,17 @@ Improve readability and maintainability
 Types of Terraform Variables:
 
 1. Input Variables
-
 Used to pass values into Terraform configurations.
 
 2. Output Variables
-
 Used to display or export values after infrastructure is created.
 
 3. Local Variables
-
 Used for intermediate values inside configuration.
+
+variable (var) = Input from outside (user, terraform.tfvars, CLI, parent module,variable block).
+locals (local) = Calculated or reusable values inside the module.
+output = Values Terraform returns after applying the configuration.
 
 Ways to Assign Variable Values
 
