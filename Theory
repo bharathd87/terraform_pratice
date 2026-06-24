@@ -1016,6 +1016,22 @@ Key Characteristics
 | State   | Managed by Terraform   | Not created, only referenced  |
 | Example | EC2 instance           | AMI lookup                    |
 | Keyword | `resource`             | `data`                        |
+
+
+Example: VPC
+You know only the tag:
+
+data "aws_vpc" "main" {
+  tags = {
+    Name = "prod-vpc"
+  }
+}
+
+Terraform finds the VPC and gives you access to:
+data.aws_vpc.main.id
+data.aws_vpc.main.cidr_block
+data.aws_vpc.main.arn
+data.aws_vpc.main.owner_id
 *************************************************************************************************************************************************************
 
 Terraform Resource Lifecycle Rules
