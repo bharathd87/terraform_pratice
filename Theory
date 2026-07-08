@@ -1201,6 +1201,10 @@ Ensuring proper resource sequencing
 Creates repeating nested blocks dynamically.
 
 🧪 Example
+locals {
+  ports = [22, 80, 443]
+}
+
 resource "aws_security_group" "sg" {
   name = "example"
 
